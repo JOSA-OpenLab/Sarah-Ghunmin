@@ -1,0 +1,3 @@
+## TASK 1
+i found a CI issue in [tvm](https://github.com/apache/tvm), i looked into it, reproduced the problem where mixed spacing in comparisons (for example, Or(x<lower, x> upper)) slipped through, and added a small, focused fix: a conservative linter (tests/lint/check_operator_spacing.py) plus a pytest (tests/lint/test_check_operator_spacing.py) that checks allowed and disallowed forms. 
+i tuned the linter so it avoids noisy false positives by skipping includes, templates, casts, and << / >> uses, ran the checks locally, and opened a pr, this stops the specific styling bug quickly
