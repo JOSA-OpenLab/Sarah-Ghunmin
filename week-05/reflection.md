@@ -1,3 +1,6 @@
 ## TASK 1
 i found a CI issue in [tvm](https://github.com/apache/tvm), i looked into it, reproduced the problem where mixed spacing in comparisons (for example, Or(x<lower, x> upper)) slipped through, and added a small, focused fix: a conservative linter (tests/lint/check_operator_spacing.py) plus a pytest (tests/lint/test_check_operator_spacing.py) that checks allowed and disallowed forms. 
 i tuned the linter so it avoids noisy false positives by skipping includes, templates, casts, and << / >> uses, ran the checks locally, and opened a pr, this stops the specific styling bug quickly
+
+##task 2
+i chose my Mandelbrot set viewer to add the CI workflow to it [repo](https://github.com/sarahgh8/Mandelbrot), first i created the .github folder that contains ci.yml, which contains a script written in yml for the github actions workflow, it has which actions to get triggered upon, for example pushing, pull requests, etc, as well as the jobs which are lint to check code format and test to test the code, each one of them have 2 versions of matrix for 2 compilers, and i added the ci badge in readme file.
