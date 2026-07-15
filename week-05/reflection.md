@@ -4,3 +4,8 @@ i tuned the linter so it avoids noisy false positives by skipping includes, temp
 
 ##task 2
 i chose my Mandelbrot set viewer to add the CI workflow to it [repo](https://github.com/sarahgh8/Mandelbrot), first i created the .github folder that contains ci.yml, which contains a script written in yml for the github actions workflow, it has which actions to get triggered upon, for example pushing, pull requests, etc, as well as the jobs which are lint to check code format and test to test the code, each one of them have 2 versions of matrix for 2 compilers, and i added the ci badge in readme file.
+
+
+## Task 3
+
+i installed docker to use act and run github actions locally, in the repo root i ran act and all the CI tests passed in all matrix elements which are gcc and clang 
