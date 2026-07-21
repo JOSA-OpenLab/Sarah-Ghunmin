@@ -1,0 +1,2 @@
+## Task 1 Dependabot
+dependabot is used to check all the requirements and dependencies for a project and update them, it is also used for security purposes, i added  the file inside of docs folder, and added the uses in workflow folder, i also enabled it in settings
